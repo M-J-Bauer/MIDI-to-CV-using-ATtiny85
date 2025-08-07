@@ -14,4 +14,4 @@ preferable (to eliminate any residual PWM carrier), but this seems like overkill
 
 See comments in the source code for details.
 
-See my other DIY electronic music projects at mjbauer.biz.
+See my other DIY electronic music projects at [mjbauer.biz](https://www.mjbauer.biz/).
