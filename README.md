@@ -7,6 +7,8 @@ The 2nd CV can be configured (by #defines) to respond to MIDI velocity, modulati
 
 There is also an option to enable "Multi-Trigger" mode, so that the device will work properly with a polyphonic controller.
 
+![ATtiny85-MIDI-CV-schematic](https://github.com/user-attachments/assets/016d90ca-7801-4b64-b908-47c0f566a005)
+
 The CV outputs require a low-pass filter. For most purposes, a simple 1st-order RC filter will suffice. The corner frequency
 should be in the range 300Hz to 1kHz. For example, use R = 2k2, C = 100n, or R = 1k0, C = 220n. The resistor value should be low,
 or use an op-amp unity-gain buffer (voltage follower) to obtain a low output impedance. A 2nd-order active filter would be
