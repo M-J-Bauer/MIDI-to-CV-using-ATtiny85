@@ -23,4 +23,15 @@ If you use a naked ATtiny85 chip (DIP8), i.e. not a breakout board (DigiSpark), 
 However, it is possible to use any Arduino AVR-8 board (e.g. Uno R3 or Nano) as a programming tool, with appropriate code installed,
 from within the Arduino IDE app. (For more info, do a Google search.)
 
+On Kevin's Blog, in a reply to a comment, Kevin noted that the MIDI input (software-driven serial port) may be easily overloaded. 
+Some MIDI controllers (keyboards, sequencers, etc) send frequent "real-time" messages which can flood the MIDI receiver function. 
+The software UART cannot handle all of the incoming messages, so some messages may be lost or corrupted.
+
+Hence, if possible, turn off "real-time" messages on your MIDI keyboard. 
+Also, if possible, turn off Pitch-bend and After-Touch, and set the minimum interval between Control-Change messages to 50 or 100 milliseconds.
+
+The ATtiny85 MCU is not a good choice for "serious" MIDI-CV applications. 
+The ATmega32U4, which I chose for my [superior MIDI-to-CV translator design](https://www.mjbauer.biz/DIY-MIDI-to-CV-box.html), 
+has a full-featured UART (on-chip peripheral) with RX interrupt capability, so it can handle a much greater volume of received messages.
+
 See my other DIY electronic music projects at [www.mjbauer.biz](https://www.mjbauer.biz/).
