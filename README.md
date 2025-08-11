@@ -6,7 +6,9 @@ The original design has only one CV output. I extended the Arduino sketch to sup
 The 2nd CV can be configured (by #defines) to respond to MIDI velocity, modulation (CC1) or breath pressure (CC2) to suit wind controllers.
 
 There is also an option to enable "Multi-Trigger" mode, so that the device will work properly with a polyphonic controller.
-See comments in the source code for details.
+See comments in the source code for setup instructions. An explanation of Multi-Trigger vs Legato mode can be found in my blog
+describing a more capable MIDI-to-CV device. 
+See under the headings ['Gate Output Function' and 'Legato Mode'](https://www.mjbauer.biz/DIY-MIDI-to-CV-box.html#user_guide).
 
 ![ATtiny85-MIDI-CV-schematic](https://github.com/user-attachments/assets/016d90ca-7801-4b64-b908-47c0f566a005)
 
@@ -31,7 +33,7 @@ Hence, if possible, turn off "real-time" messages on your MIDI keyboard.
 Also, if possible, turn off Pitch-bend and After-Touch, and set the minimum interval between Control-Change messages to 50 or 100 milliseconds.
 
 The ATtiny85 MCU is not a good choice for "serious" MIDI-CV applications. 
-The ATmega32U4, which I chose for my [superior MIDI-to-CV translator design](https://www.mjbauer.biz/DIY-MIDI-to-CV-box.html), 
+The ATmega32U4, which I chose for a better [MIDI-to-CV translator design](https://www.mjbauer.biz/DIY-MIDI-to-CV-box.html), 
 has a full-featured UART (on-chip peripheral) with RX interrupt capability, so it can handle a much greater volume of received messages.
 
 See my other DIY electronic music projects at [www.mjbauer.biz](https://www.mjbauer.biz/).
