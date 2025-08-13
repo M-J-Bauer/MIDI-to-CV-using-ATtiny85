@@ -18,6 +18,9 @@ but this seems like overkill compared with the rest of the circuit.
 
 There's no opto-coupler in the MIDI input circuit. For test purposes and for simple MIDI setups, e.g. keyboard + MIDI-CV + synth, 
 you don't need optical isolation. You can easily add an opto if you wish... see Kevin's Blog.
+TRS plug/socket pins corresponding to DIN5 pins are shown in this picture:
+
+![MIDI-TRS-DIN-pin-assignment](https://github.com/user-attachments/assets/d9c10b9f-fead-46f7-b03d-00800d483f13)
 
 Before trying it, I didn't know how well the ATtiny85 was supported by the Arduino IDE. As it turns out... not very well! 
 You need to install the "ATtiny CORE" board package. No problem there, but I could not get any of the programming tools to work with Arduino.
